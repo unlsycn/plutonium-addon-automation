@@ -41,10 +41,10 @@ export const buildTask = async (
 		readme: "README.md",
 		license: "MIT",
 		// Use "latest" as manifest URL, so that when updating the module the user always gets the latest version
-		manifest: `https://github.com/TheGiddyLimit/plutonium-addon-automation/releases/latest/download/module.json`,
+		manifest: `https://github.com/unlsycn/plutonium-addon-automation/releases/latest/download/module.json`,
 		// Set "download" to this specific version, so that users manually entering the link will receive the version they expect
-		download: `https://github.com/TheGiddyLimit/plutonium-addon-automation/releases/download/v${packageJson.version}/plutonium-addon-automation.zip`,
-		changelog: "https://raw.githubusercontent.com/TheGiddyLimit/plutonium-addon-automation/master/CHANGELOG.md",
+		download: `https://github.com/unlsycn/plutonium-addon-automation/releases/download/v${packageJson.version}/plutonium-addon-automation.zip`,
+		changelog: "https://raw.githubusercontent.com/unlsycn/plutonium-addon-automation/master/CHANGELOG.md",
 		compatibility: {
 			minimum: "13",
 			verified: "13.347",
