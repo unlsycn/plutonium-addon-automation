@@ -41,7 +41,7 @@ export class Integrations extends StartupHookMixin(class {}) {
 					documentType,
 					isSilent,
 				});
-				if (out && game.settings.get(SharedConsts.MODULE_ID, ModuleSettingConsts.DEV_IS_DBG)) console.debug(...Util.LGT, `Found automation for ${ent.name} in integration: ${itg.constructor.name}`);
+				if (out && game.settings.get(SharedConsts.MODULE_ID, ModuleSettingConsts.DEV_IS_DBG)) console.debug(...Util.LGT, `Found automation for ${ent.ENG_name} in integration: ${itg.constructor.name}`);
 				return out;
 			});
 	}

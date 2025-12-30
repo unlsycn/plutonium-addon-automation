@@ -11,20 +11,20 @@ class _ChrisPremadesNameMappings {
 
 	static _MAP_GENERAL = {
 		"optionalfeature": ent => {
-			if (ent.featureType?.some(it => it === "MM")) return `Metamagic - ${ent.name}`;
-			if (ent.featureType?.some(it => it === "MV:B")) return `Maneuvers: ${ent.name}`;
+			if (ent.featureType?.some(it => it === "MM")) return `Metamagic - ${ent.ENG_name}`;
+			if (ent.featureType?.some(it => it === "MV:B")) return `Maneuvers: ${ent.ENG_name}`;
 
 			return null;
 		},
 	};
 
 	static getMappedName ({propJson, ent}) {
-		if (this._MAP_SPECIFIC[propJson]?.[ent.name]) return this._MAP_SPECIFIC[propJson]?.[ent.name];
+		if (this._MAP_SPECIFIC[propJson]?.[ent.ENG_name]) return this._MAP_SPECIFIC[propJson]?.[ent.ENG_name];
 		if (this._MAP_GENERAL[propJson]) {
 			const mapped = this._MAP_GENERAL[propJson](ent);
 			if (mapped) return mapped;
 		}
-		return ent.name;
+		return ent.ENG_name;
 	}
 }
 

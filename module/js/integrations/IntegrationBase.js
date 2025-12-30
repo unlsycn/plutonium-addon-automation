@@ -101,7 +101,7 @@ export class IntegrationBase {
 
 	_mutCleanJson ({json}) {
 		// Avoid clobbering specific data
-		["name", "img", "id", "_id"].forEach(prop => delete json[prop]);
+		["name", "ENG_name", "img", "id", "_id"].forEach(prop => delete json[prop]);
 		["source", "description"].forEach(prop => delete json?.system?.[prop]);
 
 		// Remove unwanted flags
