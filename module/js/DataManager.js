@@ -30,7 +30,7 @@ export class DataManager extends StartupHookMixin(class {}) {
 		if (out) return;
 		if (!game.settings.get(SharedConsts.MODULE_ID, ModuleSettingConsts.DEV_IS_WARN_WHEN_NOT_AUTOMATED)) return;
 
-		const ident = `${ent.name} (${ent.source})`;
+		const ident = `${ent.name} (${ent.ENG_name}) (${ent.source})`;
 
 		if (this._LOGGED_IDENTIFIERS.has(ident)) return;
 		this._LOGGED_IDENTIFIERS.add(ident);
@@ -70,7 +70,7 @@ export class DataManager extends StartupHookMixin(class {}) {
 				documentType,
 				isSilent,
 			});
-			if (out && game.settings.get(SharedConsts.MODULE_ID, ModuleSettingConsts.DEV_IS_DBG)) console.debug(...Util.LGT, `Found automation for ${ent.name} in data source: ${dataSource.name}`);
+			if (out && game.settings.get(SharedConsts.MODULE_ID, ModuleSettingConsts.DEV_IS_DBG)) console.debug(...Util.LGT, `Found automation for ${ent.name} (${ent.ENG_name}) in data source: ${dataSource.name}`);
 			return out;
 		});
 
