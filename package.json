@@ -18,7 +18,7 @@
 		"build:changelog": "node script/generate-changelog.js",
 		"build": "npm run build:index && npm run build:deps && npm run build:changelog && npm run build:module",
 		"build:dev": "npm run build:index && npm run build:deps && npm run build:changelog && npm run build:module -- --dev",
-		"package": "node script/package.js",
+		"package": "npm run build:index && npm run build:deps && node script/package.js",
 		"local-pages": "node tool/server.js",
 		"macro-template": "node script/generate-item-macro-template.js",
 		"mt": "npm run macro-template --",
